@@ -1,5 +1,7 @@
 # grill-me
 
+**Any chatbot** — paste it into any chat assistant (ChatGPT, Copilot, Gemini, Claude). No setup.
+
 A prompt that interviews you about a problem instead of answering it. One question at a time, until the thing you're trying to do is actually clear. It doesn't think for you — it makes you think.
 
 ## Use it

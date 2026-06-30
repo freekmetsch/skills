@@ -1,14 +1,17 @@
 # grill-with-docs
 
+**Needs your files** — runs only where it can read and write your real files: Claude Code or Cowork.
+
 `grill-me` with a second job: while it interviews you, it keeps your project's shared language and decisions written down. When a fuzzy term gets pinned, it updates your `CONTEXT.md` glossary on the spot. When a hard-to-reverse call gets made, it offers to record an ADR. For a codebase that already keeps a glossary and decision records.
 
 ## Install
 
-A skill is a folder with a `SKILL.md` at its root.
+This skill's whole job is editing files in your repo — your `CONTEXT.md` glossary, your decision records — so it needs a tool that can read and write your real files:
 
 - **Claude Code** — put this folder in `.claude/skills/` (one project) or `~/.claude/skills/` (everywhere).
-- **claude.ai** — zip this folder and upload it as a Skill (paid plans).
-- **ChatGPT** — load `SKILL.md`, `CONTEXT-FORMAT.md`, and `ADR-FORMAT.md` as a custom GPT's instructions and knowledge.
+- **Cowork** — load it as a skill with access to your project files.
+
+A claude.ai Skill, a ChatGPT GPT, or a Gemini Gem can hold the interview, but none of them can write to your files — so they can't do the part that makes this different from `grill-me`.
 
 ## Configure (optional)
 
