@@ -34,4 +34,4 @@ A skill is a folder with a `SKILL.md` at its root. To use one:
 
 ## License
 
-[MIT](LICENSE). The grill skills derive from Matt Pocock's MIT-licensed work; his attribution is kept in the credits above and in each skill's README.
+[MIT](LICENSE). The grill skills derive from Matt Pocock's MIT-licensed work; the attribution is in [NOTICE](NOTICE), the credits above, and each skill's README.
