@@ -6,7 +6,9 @@ skills, which are also MIT-licensed:
   Copyright (c) Matt Pocock
   https://github.com/mattpocock/skills
 
-  - grill-me:        https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me
-  - grill-with-docs: https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs
+  - grill-me is adapted from his "grill-me" skill, in:
+      https://github.com/mattpocock/skills/tree/main/skills/productivity
+  - grill-with-docs is adapted from his "grill-with-docs" skill, in:
+      https://github.com/mattpocock/skills/tree/main/skills/engineering
 
 The `educational-worksheets` skill is original work by Freek Metsch.
