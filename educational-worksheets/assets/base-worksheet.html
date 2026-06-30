@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--
+  BASE WORKSHEET TEMPLATE — print-safe substrate.
+
+  This file is the correct starting point for every worksheet. Copy it, then build
+  the worksheet inside the .worksheet container, replacing the demo section.
+
+  What is baked in and MUST NOT be removed:
+    • @page margin (12mm) — the print safety floor. Content reaching the paper edge
+      is the most common failure; this keeps a consistent margin on EVERY page.
+    • The @media print pagination block — the fragile break-chain machinery.
+    • The Phosphor <head> link and the print button (outside the print area).
+
+  For anything beyond this substrate — the full component library, the spacing-tier
+  table, the long-table and break-chain diagnostics — load references/css-patterns.md.
+  css-patterns.md is AUTHORITATIVE: if any value here ever drifts from it, it wins.
+
+  This template carries Standard-tier values. For Compact or Spacious, swap the values
+  per the Spacing Tiers table in css-patterns.md.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worksheet</title>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+    <style>
+        /* ============================================================
+           PRINT SAFETY FLOOR — do not weaken these.
+           ============================================================ */
+        @page {
+            size: A4;
+            /* Baked-in safe margin. Applies to EVERY page (page 2+ included), so
+               margins stay symmetric without relying on the browser's "Default"
+               dropdown value. Chrome's "Margins: Default" honours this; "None",
+               "Minimum", and "Custom" override it ("None" pushes content to the
+               paper edge). Keep the print step on Default. */
+            margin: 12mm;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .worksheet {
+                width: 100%;
+                margin: 0;
+                padding: 0;          /* @page margin handles all page spacing */
+                box-sizing: border-box;
+                /* NO height, NO min-height — let content flow naturally */
+            }
+            .print-button { display: none; }
+
+            /* PAGINATION: prevent breaks INSIDE sections, let the browser break BETWEEN them */
+            .section,
+            .skill-section,
+            .header,
+            .intro-box,
+            .reflection-strip,
+            .question-block,
+            .task-block,
+            .principle-box,
+            .scenario,
+            table {
+                break-inside: avoid;
+            }
+
+            /* OPT-OUT: long containers that would otherwise be shoved onto a new page.
+               Apply .allow-break to any section whose sub-parts are coherent but whose
+               total height approaches or exceeds ~250mm. */
+            .section.allow-break,
+            .skill-section.allow-break {
+                break-inside: auto;
+            }
+
+            /* LONG TABLE: a table taller than a page must be allowed to split, with its
+               header repeated on each page. Add .long-table to any table that can exceed
+               a page; it overrides the global table { break-inside: avoid } above. */
+            table.long-table {
+                break-inside: auto;
+            }
+            table.long-table thead {
+                display: table-header-group;   /* repeat header on every page */
+            }
+            table.long-table tr {
+                break-inside: avoid;           /* never split a single row */
+            }
+
+            /* PROTECT WRAPPING META: a multi-line <p> of descriptive text can split
+               mid-sentence across a page boundary. */
+            .rubric-meta,
+            .section-meta {
+                break-inside: avoid;
+            }
+
+            /* BREAK CHAIN: headers AND framing paragraphs MUST stick to what follows them.
+               Every element between a section header and the first response block must be
+               in this list or the chain breaks at that point. Framing paragraphs are the
+               #1 miss — they look like prose but they are structural. */
+            .phase-header,
+            .section-title,
+            .section-header,
+            .theory-box,
+            .exercise-label,
+            .phase-subtitle,
+            .exercise-subtitle,
+            /* framing/intro paragraphs — structural, not decorative */
+            .phase-framing,
+            .section-framing,
+            .answer-title,
+            .answer-framing,
+            .keep-next {
+                break-after: avoid;
+            }
+
+            /* KEEP-WITH-PREV: a block that must stay with its preceding intro one-liner. */
+            .keep-with-prev {
+                break-before: avoid;
+            }
+
+            /* KEEP-BLOCK: wraps header + framing + first content block as an atomic unit.
+               ONLY safe when the wrapped group fits within ~150mm — never wrap tall sections. */
+            .keep-block {
+                break-inside: avoid;
+            }
+
+            /* NEW-PAGE: the ONLY sanctioned forced break — at a real content boundary
+               (Session 1 → 2, Part A → B, a standalone answer key / appendix).
+               A design choice, never a repair for a broken chain. */
+            .new-page {
+                break-before: page;
+            }
+        }
+
+        @media screen {
+            body {
+                background: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .worksheet {
+                background: white;
+                width: 210mm;
+                padding: 12mm;       /* matches the @page print margin — screen preview == print */
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                box-sizing: border-box;
+                position: relative;
+                margin-bottom: 20px;
+                /* NO min-height: 297mm — continuous scroll on screen */
+            }
+            .print-button {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #333;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                z-index: 100;
+            }
+            .print-button:hover { background: #000; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.45;       /* Standard tier */
+            color: #000;
+            font-size: 11px;         /* Standard tier */
+        }
+
+        /* ============================================================
+           CORE STRUCTURAL COMPONENTS (Standard tier).
+           The full component library lives in references/css-patterns.md.
+           ============================================================ */
+        .header {
+            border-bottom: 3px solid #333;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .subtitle {
+            font-style: italic;
+            color: #555;
+            font-size: 11px;
+        }
+
+        .section {
+            margin-bottom: 16px;
+            border-left: 4px solid #333;
+            padding-left: 12px;
+        }
+        .section-title {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .section-title i[class*="ph-bold"] {
+            font-size: 16px;
+            color: #000;
+        }
+        /* Framing line — a plain full sentence telling the student what the section
+           is for. Sits BETWEEN the header and the content, so it is part of the
+           break chain above. Not bolded — that's an instruction, not a framing line. */
+        .section-framing {
+            font-size: 10px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .write-line {
+            border-bottom: 1px solid #666;
+            height: 22px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-button" onclick="window.print()"><i class="ph-bold ph-printer"></i> Print to PDF</button>
+
+    <div class="worksheet">
+
+        <div class="header">
+            <div class="title">Worksheet title</div>
+            <div class="subtitle">A one-line framing of what this sheet is for.</div>
+            <!-- Omit Name / Date by default; add them only when collection,
+                 assessment, hand-in, or anonymity actually requires them. -->
+        </div>
+
+        <!-- DEMO SECTION — replace with the real sections.
+             The skeleton is: header (one Phosphor icon matched to the section's
+             function) → framing line (plain sentence) → response blocks. -->
+        <div class="section">
+            <div class="section-title">
+                <i class="ph-bold ph-pencil-simple"></i>
+                <span>Section heading</span>
+            </div>
+            <p class="section-framing">One plain sentence telling the student what this section is for.</p>
+            <div class="write-line"></div>
+            <div class="write-line"></div>
+        </div>
+
+        <!-- Add more <div class="section"> blocks here. The browser paginates
+             between them — never hand-place a page break (see invariant 2). -->
+
+    </div>
+
+</body>
+</html>
