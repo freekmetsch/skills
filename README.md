@@ -1,26 +1,24 @@
 # Freek's prompts & AI skills
 
-A few prompts and AI skills I actually use, free for you to take. Copy one, paste it, change it to fit what you need — no permission, no sign-up.
+A few prompts and AI skills I use in my teaching and design work, free for you to take. Try them out!
 
 ## What's a "prompt"? What's a "skill"?
 
-A **prompt** is just text you paste into a chat assistant (ChatGPT, Copilot, Gemini, Claude) to tell it how to behave. A **skill** is a prompt plus a few extra files bundled together, so an assistant can do a more involved job the same way every time. You don't need to know the difference to use these — each one tells you exactly where it runs and what to do.
+A **prompt** is just instructions in the form of 'raw' text that you paste into any chat assistant (ChatGPT, Copilot, Gemini, Claude). A **skill** is a prompt that you can call repeatedly using your **AI agent**. It can just be a prompt, but some skills consist of a few extra files bundled together, so an assistant can do a more involved job the same way every time. Some skills are meant to be used in a **file system** — they read and write to a folder of files you give it access to, usually in a tool like Claude Code, Cowork, or Codex.
 
-## Where each one runs
+## Types of skills
 
-Every skill carries one of three labels. The label tells you what you need to run it, not how it's built:
-
-- **Any chatbot** — paste it into any chat assistant. No setup.
-- **Add to your AI app** — install it once (as a Claude Skill, a ChatGPT GPT, or a Gemini Gem). Claude works best.
-- **Needs your files** — only works in a tool that can open and edit the files on your own computer (Claude Code or Cowork).
+- **Basic Prompt - Any chatbot** — paste it into any chat assistant. No setup. Can also be used as a repeatable skill.
+- **Skill - advanced AI app** — install it once (as a Claude Skill, a ChatGPT GPT, or a Gemini Gem). Claude works best as it's the company that designed the 'skill' concept.
+- **Skill + files** — install it in a tool that can open and edit files on your computer (Claude Code, Codex, Cowork, or any IDE).
 
 ## What's here
 
 ### [grill-me](grill-me/) — a thinking partner that interviews you
-**Use when** you have a half-formed idea and need to think it through — a lesson to prep, a plan, a decision, something you want to write. *(Any chatbot.)* Instead of answering, it asks you one sharp question at a time until the thing you're trying to do is actually clear. You do the talking; it keeps pushing. It doesn't think for you — it makes you think.
+**Use when** you have a half-formed idea or a project that you need to think through — a lesson to prepare, a presentation, a decision, a design of some kind, etc. *(Any chatbot.)* AI chatbots tend to assume a lot of things, but this skill asks you one question at a time, exploring all aspects of it, until the thing you're trying to think through is clear in your head.
 
 ### [educational-worksheets](educational-worksheets/) — a design partner for worksheets
-**Use when** you're a teacher making a worksheet or handout and you want it to fit your lesson, not a generic template. *(Add to your AI app.)* It asks what the worksheet is for, who it's for, and how the page should flow before it makes anything, offers you a few layout options with the trade-offs, and builds the printable page last. You make the teaching decisions; it handles the craft. You get a clean, print-ready page.
+**Use when** you want to design a worksheet or handout. The AI agent will gather context - what the worksheet is for, who it's for, and how the page should flow before it makes anything, offers you a few layout options with the trade-offs. It uses HTML to design the worksheet/handout which you can directly print and/or save to PDF. I recommend you use it with /grill-me or /grill-with-docs to give the agent as much context as you can.
 
 ### [grill-with-docs](grill-with-docs/) — grill-me that also keeps your notes up to date
 **Use when** you keep a project's shared definitions and big decisions in text files, and you want them to stay current while you think a plan through. *(Needs your files.)* It interviews you the same relentless way, and as the answers land it writes the important bits down for you: it pins what a fuzzy word really means, and notes the decisions you'd otherwise forget the reasons for. Built for people who work inside a project folder — developers, mostly.
