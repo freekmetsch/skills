@@ -15,7 +15,7 @@ A **prompt** is just instructions in the form of 'raw' text that you paste into 
 ## What's here
 
 ### [grill-me](grill-me/) — a thinking partner that interviews you
-**Use when** you have a half-formed idea or a project that you need to think through — a lesson to prepare, a presentation, a decision, a design of some kind, etc. *(Any chatbot.)* AI chatbots tend to assume a lot of things, but this skill asks you one question at a time, exploring all aspects of it, until the thing you're trying to think through is clear in your head.
+**Use when** you have a half-formed idea or a project that you need to think through — a lesson to prepare, a presentation, a decision, a design of some kind, etc. *(Any chatbot.)* AI chatbots tend to assume a lot of things, but with this skill the AI bot becomes a critical interviewer, asking you one question at a time. It asks you to explore and understand all aspects of your plan, until the thing you're trying to think through is clear in your head.
 
 ### [educational-worksheets](educational-worksheets/) — a design partner for worksheets
 **Use when** you want to design a worksheet or handout. The AI agent will gather context - what the worksheet is for, who it's for, and how the page should flow before it makes anything, offers you a few layout options with the trade-offs. It uses HTML to design the worksheet/handout which you can directly print and/or save to PDF. I recommend you use it with /grill-me or /grill-with-docs to give the agent as much context as you can. More context allows the agent to suggest better activities which generally results in higher quality worksheets. 

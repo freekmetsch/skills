@@ -2,7 +2,7 @@
 
 **Basic Prompt** — paste it into any chat assistant (ChatGPT, Copilot, Gemini, Claude). No setup.
 
-**Use when** you have a half-formed idea and need to think it through — a lesson to prep, a plan, a decision, something you want to write. Instead of answering your question, grill-me interviews you about it: one sharp question at a time, until what you're trying to do is actually clear. You do the talking. It keeps pushing. It doesn't think for you — it makes you think.
+**Use when** you have a half-formed idea or a project that you need to think through — a lesson to prepare, a presentation, a decision, a design of some kind, etc. *(Any chatbot.)* AI chatbots tend to assume a lot of things, but with this skill the AI bot becomes a critical interviewer, asking you one question at a time. It asks you to explore and understand all aspects of your plan, until the thing you're trying to think through is clear in your head.
 
 ## Use it
 
