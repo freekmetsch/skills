@@ -1,6 +1,6 @@
 # grill-me
 
-**Any chatbot** — paste it into any chat assistant (ChatGPT, Copilot, Gemini, Claude). No setup.
+**Basic Prompt** — paste it into any chat assistant (ChatGPT, Copilot, Gemini, Claude). No setup.
 
 **Use when** you have a half-formed idea and need to think it through — a lesson to prep, a plan, a decision, something you want to write. Instead of answering your question, grill-me interviews you about it: one sharp question at a time, until what you're trying to do is actually clear. You do the talking. It keeps pushing. It doesn't think for you — it makes you think.
 

@@ -1,6 +1,6 @@
 # Freek's prompts & AI skills
 
-A few prompts and AI skills I use in my teaching and design work, free for you to take. Try them out!
+A few prompts and AI skills I use in my teaching and design work.
 
 ## What's a "prompt"? What's a "skill"?
 
@@ -18,14 +18,12 @@ A **prompt** is just instructions in the form of 'raw' text that you paste into 
 **Use when** you have a half-formed idea or a project that you need to think through — a lesson to prepare, a presentation, a decision, a design of some kind, etc. *(Any chatbot.)* AI chatbots tend to assume a lot of things, but this skill asks you one question at a time, exploring all aspects of it, until the thing you're trying to think through is clear in your head.
 
 ### [educational-worksheets](educational-worksheets/) — a design partner for worksheets
-**Use when** you want to design a worksheet or handout. The AI agent will gather context - what the worksheet is for, who it's for, and how the page should flow before it makes anything, offers you a few layout options with the trade-offs. It uses HTML to design the worksheet/handout which you can directly print and/or save to PDF. I recommend you use it with /grill-me or /grill-with-docs to give the agent as much context as you can.
+**Use when** you want to design a worksheet or handout. The AI agent will gather context - what the worksheet is for, who it's for, and how the page should flow before it makes anything, offers you a few layout options with the trade-offs. It uses HTML to design the worksheet/handout which you can directly print and/or save to PDF. I recommend you use it with /grill-me or /grill-with-docs to give the agent as much context as you can. More context allows the agent to suggest better activities which generally results in higher quality worksheets. 
 
 ### [grill-with-docs](grill-with-docs/) — grill-me that also keeps your notes up to date
-**Use when** you keep a project's shared definitions and big decisions in text files, and you want them to stay current while you think a plan through. *(Needs your files.)* It interviews you the same relentless way, and as the answers land it writes the important bits down for you: it pins what a fuzzy word really means, and notes the decisions you'd otherwise forget the reasons for. Built for people who work inside a project folder — developers, mostly.
+**Use when** you are working on larger projects over a longer period of time. The AI agent will relentlessly interview you one question at a time which will clarify your thinking. By keeping a glossary in txt files with key terminology it's able to manage the project more effectively avoiding any misunderstandings. The skill requires a *file system* to work in in order to write and read those text files. Include all relevant project files in that file system so it has all the context for your project. It will also keep track of any foundational decisions you make as you're working in the project, so design decisions are always considered.
 
 ## Get the files
-
-Two easy ways, no Git knowledge needed:
 
 - **Everything at once** — click the green **Code** button near the top of [this page](https://github.com/freekmetsch/skills) and choose **Download ZIP** ([or use this direct link](https://github.com/freekmetsch/skills/archive/refs/heads/main.zip)).
 - **Just one skill** — [grill-me.zip](https://github.com/freekmetsch/skills/raw/main/grill-me/grill-me.zip) · [educational-worksheets.zip](https://github.com/freekmetsch/skills/raw/main/educational-worksheets/educational-worksheets.zip) · [grill-with-docs.zip](https://github.com/freekmetsch/skills/raw/main/grill-with-docs/grill-with-docs.zip)
@@ -34,7 +32,7 @@ Each skill's own page (linked above under "What's here") has step-by-step instru
 
 ## Questions?
 
-Email me — **metschfreek@gmail.com**. Happy to help you get one running.
+Email me — **metschfreek@gmail.com**. 
 
 ## Credits
 

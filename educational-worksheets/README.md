@@ -1,6 +1,6 @@
 # Educational Worksheets
 
-**Add to your AI app** — install it once (as a Claude Skill, a ChatGPT GPT, or a Gemini Gem). Claude works best.
+**Skill** — install it once (as a Claude Skill, a ChatGPT GPT, or a Gemini Gem). Claude works best.
 
 **Use when** you're a teacher making a worksheet or handout and you want it to fit your actual lesson, not a generic template. Ask a chatbot for "a worksheet on X" and it picks a structure, fills in plausible content, and quietly makes the design choices you should have made. This does the opposite: it's a design partner, not a template dispenser.
 
@@ -18,7 +18,7 @@ Install it (below), then ask it for a worksheet — "help me build a worksheet o
 - **ChatGPT** — make a custom GPT and load `SKILL.md` plus the `references/` files as its instructions and knowledge.
 - **Gemini** — load the same files into a Gem.
 
-One exception: **Microsoft Copilot's basic tier can't run it well** — it has too little room to work with, so it skips the questions and hands back a template (I tested this at HU).
+**Microsoft Copilot's basic tier can't run packaged skills.** I'm working on a simplified version that might work on Copilot — email me if you're interested (it speeds up the process!).
 
 ## What's inside
 
