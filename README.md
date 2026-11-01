@@ -23,6 +23,13 @@ A **prompt** is just instructions in the form of 'raw' text that you paste into 
 ### [grill-with-docs](grill-with-docs/) — grill-me that also keeps your notes up to date
 **Use when** you are working on larger projects over a longer period of time. The AI agent will relentlessly interview you one question at a time which will clarify your thinking. By keeping a glossary in txt files with key terminology it's able to manage the project more effectively avoiding any misunderstandings. The skill requires a *file system* to work in in order to write and read those text files. Include all relevant project files in that file system so it has all the context for your project. It will also keep track of any foundational decisions you make as you're working in the project, so design decisions are always considered.
 
+### [moonshot](moonshot/) — question the system before improving it
+
+**Use when** you want a radical alternative to an existing system. Consider a different vehicle,
+an invention such as teleportation, or whether the trip is needed at all. The agent tests the
+hardest assumption, then builds what the evidence supports. *(Skill + files.)* Give it a time
+budget and a stopping point. It works without the other skills in this repository.
+
 ## Get the files
 
 - **Everything at once** — click the green **Code** button near the top of [this page](https://github.com/freekmetsch/skills) and choose **Download ZIP** ([or use this direct link](https://github.com/freekmetsch/skills/archive/refs/heads/main.zip)).

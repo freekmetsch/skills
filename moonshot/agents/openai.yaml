@@ -1,0 +1,4 @@
+interface:
+  display_name: "Moonshot"
+  short_description: "Pursue radical solutions to major engineering problems"
+  default_prompt: "Use $moonshot to pursue a radical solution, test its hardest assumption, and deliver worthwhile progress within the task's budget and authority."
